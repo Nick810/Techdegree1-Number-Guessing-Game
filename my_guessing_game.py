@@ -44,7 +44,6 @@ def start_game():
                     start_game()
                 else:
                     print("Hope that was fun! :P, Bye Now!")
-                    break
                 break
 
 start_game()
