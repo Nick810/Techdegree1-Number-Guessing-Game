@@ -39,12 +39,12 @@ def start_game():
                 new_highscores = len(guess_count)
                 highscores.append(new_highscores)
                 prompt = str(input("Would you like to play more? [y]es/[n]o "))
-                
-                if prompt.lower() != 'yes' or prompt.lower() != 'y':
-                    print("Hope that was fun! :P, Bye Now!")
-                    break
-                else:
+                if prompt.lower() == 'yes' or prompt.lower() == 'y':
                     print("\n\n")
                     start_game()
+                else:
+                    print("Hope that was fun! :P, Bye Now!")
+                    break
+                break
 
 start_game()
