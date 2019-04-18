@@ -12,12 +12,13 @@ def start_game():
     from random import randint
     CORRECT_NUMBER = randint(1,10)
     
+    if highscores:
+        print("Your HIGHSCORE is", (min(highscores)))
+    
     print("-"*35)
     print("Welcome to the Number Guessing Game")
     print("-"*35)
     print("")
-    if highscores:
-        print("Your HIGHSCORE is", (min(highscores)))
 
     while True:
         try:
@@ -39,11 +40,11 @@ def start_game():
                 highscores.append(new_highscores)
                 prompt = str(input("Would you like to play more? [y]es/[n]o "))
                 
-                if prompt.lower() == 'yes' or prompt.lower() == 'y':
-                   start_game()
+                if prompt.lower() != 'yes' or prompt.lower() != 'y':
+                    print("Hope that was fun! :P, Bye Now!")
+                    break
                 else:
-                   print("Hope that was fun! :P, Bye Now!")
-                   break
-                  
+                    print("\n\n")
+                    start_game()
 
 start_game()
