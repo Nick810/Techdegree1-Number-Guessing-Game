@@ -7,10 +7,20 @@ def clear_screen():
 
 def panthers_stats():
     panthers_team = PLAYERS[:6]
+    panther_players = []
+    for dictionary in panthers_team:
+        for keys, values in dictionary.items():
+            if keys == 'name':
+                values = panther_players.append(values)
+                
     print("Team: {} Stats".format(TEAMS[0]))
     print("-"*24)
-    print("Total players {}\n".format(len(panthers_team)))
-    print("Players on Team:")
+    print("Total players {}\n".format(len(panther_players)))
+    
+    list1 = [str(i) for i in panther_players]
+    list2 = ", ".join(list1)
+    print("Players on Team:\n{}".format(list2))
+    
     print("")
     enterToContinue()
 
@@ -88,6 +98,14 @@ def start():
             else:
                 break
 
+def teams_builder():
+    list1 = []
+    for dictionary in PLAYERS:
+        for keys, values in dictionary.items():
+            if keys == 'name':
+                values = list(values)
+        
 
 if __name__ == "__main__":
+    teams_builder()
     start()
