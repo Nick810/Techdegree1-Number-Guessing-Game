@@ -117,5 +117,4 @@ def start():
         
 
 if __name__ == "__main__":
-    teams_builder()
     start()
