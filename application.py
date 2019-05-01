@@ -8,40 +8,57 @@ def clear_screen():
 def panthers_stats():
     panthers_team = PLAYERS[:6]
     panther_players = []
+    
     for dictionary in panthers_team:
         for keys, values in dictionary.items():
             if keys == 'name':
                 values = panther_players.append(values)
                 
-    print("Team: {} Stats".format(TEAMS[0]))
-    print("-"*24)
+    print("\nTeam: {} Stats".format(TEAMS[0]))
+    print("-"*20)
     print("Total players {}\n".format(len(panther_players)))
     
-    list1 = [str(i) for i in panther_players]
-    list2 = ", ".join(list1)
-    print("Players on Team:\n{}".format(list2))
-    
-    print("")
+    each_pPlayers = [(i) for i in panther_players]
+    pPlayers = ", ".join(each_pPlayers)
+    print("Players on Team:\n  {}\n".format(pPlayers))
     enterToContinue()
 
 
 def bandits_stats():
     bandits_team = PLAYERS[6:12:]
-    print("Team: {} Stats".format(TEAMS[1]))
-    print("-"*24)
+    bandit_players = []
+    
+    for people in bandits_team:
+        for keys, values in people.items():
+            if keys == 'name':
+                values = bandit_players.append(values)
+                
+    each_bPlayers = [(i) for i in bandit_players]
+    bPlayers = ", ".join(each_bPlayers)
+    
+    print("\nTeam: {} Stats".format(TEAMS[1]))
+    print("-"*19)
     print("Total players {}\n".format(len(bandits_team)))
-    print("Players on Team:")
-    print("")
+    print("Players on Team:\n  {}\n".format(bPlayers))
     enterToContinue()
 
 
 def warriors_stats():
     warriors_team = PLAYERS[-6:]
+    warrior_players = []
+    
+    for people in warriors_team:
+        for keys, values in people.items():
+            if keys == 'name':
+                values = warrior_players.append(values)
+                
+    each_wPlayers= [(i) for i in warrior_players]
+    wPlayers = ", ".join(each_wPlayers)
+    
     print("Team: {} Stats".format(TEAMS[2]))
-    print("-"*24)
+    print("-"*20)
     print("Total players {}\n".format(len(warriors_team)))
-    print("Players on Team:")
-    print("")
+    print("Players on Team:\n  {}\n".format(wPlayers))
     enterToContinue()
 
 
@@ -77,7 +94,7 @@ def teams_options():
 def start():
         print(" BASKETBALL TEAM STATS TOOL\n")
         print("-"*28)
-        print("         - MENU -")
+        print(" "*8, "- MENU -")
         print("-"*28)
         print("")
         while True:
