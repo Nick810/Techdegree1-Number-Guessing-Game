@@ -67,7 +67,7 @@ def enterToContinue():
         moveOn = input("Press ENTER to continue...")
         if moveOn == "":
             clear_screen()
-            teams_options()
+            start()
         elif moveOn == str or int:
             print("You didn't press ENTER. Please press ENTER to continue")
     
@@ -114,13 +114,6 @@ def start():
                 print("That's not a number... Please enter a number either 1 or 2.")
             else:
                 break
-
-def teams_builder():
-    list1 = []
-    for dictionary in PLAYERS:
-        for keys, values in dictionary.items():
-            if keys == 'name':
-                values = list(values)
         
 
 if __name__ == "__main__":
