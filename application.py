@@ -27,6 +27,7 @@ def start():
                     break
             except ValueError:
                 print("That's not a number... Please enter a number either 1 or 2.\n")
+            break
 
 
 def teams_options():
@@ -38,10 +39,13 @@ def teams_options():
             team_choice = int(input("Enter an option > "))
             if team_choice == 1:
                 panthers_stats()
+                break
             elif team_choice == 2:
                 bandits_stats()
+                break
             elif team_choice == 3:
                 warriors_stats()
+                break
             else:
                 print("That's not a valid option. Please enter a number between 1 to 3.\n")
         except ValueError:
