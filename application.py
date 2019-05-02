@@ -177,7 +177,8 @@ def bandits_stats():
 
 
 def warriors_stats():
-    warriors_team = PLAYERS[-6:]
+    warriors_team = PLAYERS.copy()
+    warriors_team = warriors_team[-6:]
     warrior_players = []
     experienced_players = []
     inexperienced_players = []
