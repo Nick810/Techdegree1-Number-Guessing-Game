@@ -167,10 +167,10 @@ def bandits_stats():
 
     print("\nTeam: {} Stats".format(TEAMS[1]))
     print("-"*19)
+    print("Total players {}\n".format(len(bandits_team)))
     print("Total number of experienced players: {}".format(len(experienced_players)))
     print("Total number of inexperienced players: {}".format(len(inexperienced_players)))
     print("The average height of the team: {}\n".format(average_height))
-    print("Total players {}\n".format(len(bandits_team)))
     print("Players on Team:\n  {}\n".format(bPlayers))
     print("Guardians on the Team:\n  {}\n".format(bGuardians))
     enterToContinue()
@@ -227,10 +227,10 @@ def warriors_stats():
 
     print("\nTeam: {} Stats".format(TEAMS[2]))
     print("-"*20, "\n")
+    print("Total players {}\n".format(len(warriors_team)))
     print("Total number of experienced players: {}".format(len(experienced_players)))
     print("Total number of inexperienced players: {}".format(len(inexperienced_players)))
     print("The average height of the team: {}\n".format(average_height))
-    print("Total players {}\n".format(len(warriors_team)))
     print("Players on Team:\n  {}\n".format(wPlayers))
     print("Guardians on the Team:\n  {}\n".format(wGuardians))
     enterToContinue()
